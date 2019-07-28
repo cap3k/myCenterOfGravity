@@ -1,0 +1,26 @@
+
+<html xmlns:th="https://www.thymeleaf.org">
+
+<body>
+
+	<div th:if="${message}">
+		<h2 th:text="${message}"/>
+	</div>
+	<div th:if="${latitude}">
+		<h2 th:text="${latitude}"/>
+	</div>
+	<div th:if="${longitude}">
+		<h2 th:text="${longitude}"/>
+	</div>
+
+	<div>
+		<form method="POST" enctype="multipart/form-data" action="/test">
+			<table>
+				<tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+				<tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>
